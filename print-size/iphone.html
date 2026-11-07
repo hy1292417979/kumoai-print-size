@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How Big Can I Print an iPhone Photo? — 4032×3024 Print Sizes</title>
+<meta name="description" content="A standard iPhone photo is 4032 × 3024 pixels (12.2 MP). It prints up to 13.4 × 10.1 inches at 300 PPI, 20.2 × 15.1 at 200 PPI, and 26.9 × 20.2 at 150 PPI.">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+<a class="brand" href="../index.html">Print Size Calculator</a>
+<nav class="top">
+<a href="../index.html">Calculator</a>
+<a href="8x10.html">8×10</a>
+<a href="11x14.html">11×14</a>
+<a href="16x20.html">16×20</a>
+<a href="24x36.html">24×36</a>
+<a href="a4.html">A4 & A3</a>
+<a href="6000x4000.html">6000×4000</a>
+<a href="../megapixels-to-resolution.html">Megapixels</a>
+<a href="../dpi-ppi-calculator.html">DPI / PPI</a>
+<a href="../aspect-ratio-calculator.html">Aspect Ratio</a>
+</nav>
+</header>
+
+<h1>How Big Can I Print an iPhone Photo?</h1>
+<p class="lede">A standard iPhone photo is <strong>4032 × 3024 pixels (12.2 megapixels)</strong>. That is enough for a sharp 8×10 or 11×14-style print, a good 16×20, and a wall-sized print at 150 PPI.</p>
+
+<h2>Largest print from 4032 × 3024, by quality level</h2>
+<table>
+<thead><tr><th>Resolution</th><th>Largest print size</th><th>Quality</th></tr></thead>
+<tbody>
+<tr><td>300 PPI</td><td>13.44 × 10.08 in</td><td><span class="badge excellent">Excellent</span> — close viewing</td></tr>
+<tr><td>200 PPI</td><td>20.16 × 15.12 in</td><td><span class="badge good">Good</span> — normal distance</td></tr>
+<tr><td>150 PPI</td><td>26.88 × 20.16 in</td><td><span class="badge acceptable">Acceptable</span> — wall viewing</td></tr>
+</tbody>
+</table>
+<p>The maths is pixels ÷ PPI for each side: 4032 ÷ 300 = 13.44 in and 3024 ÷ 300 = 10.08 in at the highest quality tier.</p>
+
+<div class="card">
+<h2 style="margin-top:0">Check a different photo size</h2>
+<p style="margin-top:0;color:var(--muted)">Pre-filled with the standard iPhone size. Change the numbers for another phone, a cropped photo, or a screenshot.</p>
+<div class="grid">
+<div><label for="pw">Pixel width</label><input type="number" id="pw" value="4032" min="1" inputmode="numeric"></div>
+<div><label for="ph">Pixel height</label><input type="number" id="ph" value="3024" min="1" inputmode="numeric"></div>
+</div>
+<table>
+<thead><tr><th>Resolution</th><th>Print size (inches)</th><th>Quality</th></tr></thead>
+<tbody id="results"></tbody>
+</table>
+<p class="result" id="summary" aria-live="polite"></p>
+</div>
+
+<h2>What this means in practice</h2>
+<ul>
+<li><strong>8×10:</strong> easily excellent — you have more pixels than the 2400 × 3000 needed at 300 PPI.</li>
+<li><strong>16×20:</strong> good. A full-frame iPhone shot gives about 189 PPI at this size (4032 ÷ 20 and 3024 ÷ 16, allowing for the crop to 5:4), just under the 200 PPI tier, which looks fine on a wall.</li>
+<li><strong>24×36 poster:</strong> below 150 PPI from a single standard iPhone frame (about 112 PPI on the long side), so expect a softer poster unless the shot is a high-resolution mode, panorama or stitched image.</li>
+</ul>
+<p>Cropping, digital zoom, low light and sending a photo through messaging apps can all reduce the delivered pixel dimensions. Always check the file you will actually send to the printer — open its details and use those pixel numbers above, not the camera's headline megapixels.</p>
+
+<h2>Other print sizes</h2>
+<ul class="links">
+<li><a href="../index.html">Print size calculator (any pixel size)</a></li>
+<li><a href="8x10.html">Pixels needed for an 8×10 print</a></li>
+<li><a href="11x14.html">Pixels needed for an 11×14 print</a></li>
+<li><a href="16x20.html">Pixels needed for a 16×20 print</a></li>
+<li><a href="24x36.html">Pixels needed for a 24×36 print</a></li>
+<li><a href="a4.html">Pixels needed for A4 and A3 prints</a></li>
+<li><a href="6000x4000.html">How large can I print a 6000×4000 photo?</a></li>
+<li><a href="../megapixels-to-resolution.html">Megapixels to resolution chart</a></li>
+<li><a href="../dpi-ppi-calculator.html">DPI / PPI calculator</a></li>
+<li><a href="../aspect-ratio-calculator.html">Aspect ratio calculator for print</a></li>
+</ul>
+
+<footer>
+<p>Results are estimates based on pixel dimensions and PPI. Actual print quality also depends on focus, exposure, lens sharpness, compression and the printing process.</p>
+<p><a href="../index.html">Print Size Calculator</a> · <a href="8x10.html">8×10</a> · <a href="11x14.html">11×14</a> · <a href="16x20.html">16×20</a> · <a href="24x36.html">24×36</a> · <a href="a4.html">A4</a> · <a href="iphone.html">iPhone</a> · <a href="6000x4000.html">6000×4000</a> · <a href="../megapixels-to-resolution.html">Megapixels</a> · <a href="../dpi-ppi-calculator.html">DPI/PPI</a> · <a href="../aspect-ratio-calculator.html">Aspect Ratio</a></p>
+</footer>
+</div>
+<script>
+function fmt(n){return (Math.round(n*100)/100).toFixed(2).replace(/\.00$/,'')}
+function calc(){
+  var w=parseFloat(document.getElementById('pw').value)||0;
+  var h=parseFloat(document.getElementById('ph').value)||0;
+  var tiers=[[300,'Excellent','excellent'],[200,'Good','good'],[150,'Acceptable','acceptable']];
+  var rows='', i, ppi;
+  for(i=0;i<tiers.length;i++){ppi=tiers[i][0];
+    rows+='<tr><td>'+ppi+' PPI</td><td>'+fmt(w/ppi)+' × '+fmt(h/ppi)+' in</td><td><span class="badge '+tiers[i][2]+'">'+tiers[i][1]+'</span></td></tr>';
+  }
+  document.getElementById('results').innerHTML=rows;
+  document.getElementById('summary').textContent=(w&&h)?('This photo is '+(Math.round(w*h/100000)/10)+' megapixels.'):'';
+}
+document.getElementById('pw').addEventListener('input',calc);
+document.getElementById('ph').addEventListener('input',calc);
+calc();
+</script>
+</body>
+</html>

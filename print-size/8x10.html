@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pixels Needed for 8×10 Print — 2400×3000 at 300 PPI</title>
+<meta name="description" content="An 8×10 inch print needs 2400 × 3000 pixels (7.2 MP) at 300 PPI, 1600 × 2000 at 200 PPI, or 1200 × 1500 at 150 PPI. Check if your photo has enough pixels.">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+<a class="brand" href="../index.html">Print Size Calculator</a>
+<nav class="top">
+<a href="../index.html">Calculator</a>
+<a href="11x14.html">11×14</a>
+<a href="16x20.html">16×20</a>
+<a href="24x36.html">24×36</a>
+<a href="a4.html">A4 & A3</a>
+<a href="iphone.html">iPhone Photos</a>
+<a href="6000x4000.html">6000×4000</a>
+<a href="../megapixels-to-resolution.html">Megapixels</a>
+<a href="../dpi-ppi-calculator.html">DPI / PPI</a>
+<a href="../aspect-ratio-calculator.html">Aspect Ratio</a>
+</nav>
+</header>
+
+<h1>Pixels Needed for an 8×10 Print</h1>
+<p class="lede">For a sharp 8×10 inch print at 300 PPI you need <strong>2400 × 3000 pixels (7.2 megapixels)</strong>. Most modern phones and cameras clear this easily.</p>
+
+<h2>Pixels needed for 8×10, by quality level</h2>
+<table>
+<thead><tr><th>Resolution</th><th>Pixels needed</th><th>Megapixels</th><th>Quality</th></tr></thead>
+<tbody>
+<tr><td>300 PPI</td><td>2400 × 3000 px</td><td>7.2 MP</td><td><span class="badge excellent">Excellent</span> — close viewing</td></tr>
+<tr><td>200 PPI</td><td>1600 × 2000 px</td><td>3.2 MP</td><td><span class="badge good">Good</span> — normal distance</td></tr>
+<tr><td>150 PPI</td><td>1200 × 1500 px</td><td>1.8 MP</td><td><span class="badge acceptable">Acceptable</span> — wall viewing</td></tr>
+</tbody>
+</table>
+<p>The maths is print inches × PPI for each side: 8 in × 300 = 2400 px and 10 in × 300 = 3000 px, and 2400 × 3000 = 7,200,000 pixels = 7.2 megapixels.</p>
+
+<div class="card">
+<h2 style="margin-top:0">Check your photo</h2>
+<div class="grid">
+<div><label for="pw">Your pixel width</label><input type="number" id="pw" value="4032" min="1" inputmode="numeric"></div>
+<div><label for="ph">Your pixel height</label><input type="number" id="ph" value="3024" min="1" inputmode="numeric"></div>
+</div>
+<p class="result" id="verdict" aria-live="polite"></p>
+</div>
+
+<h2>Good to know for 8×10</h2>
+<p>8×10 has a 4:5 aspect ratio. Many cameras shoot 3:2 and most phones shoot 4:3, so a small crop from the long edges is normal when filling the whole sheet — leave a little headroom around your subject when you shoot. Because an 8×10 is usually viewed in the hand or on a desk, 300 PPI is worth aiming for if your file allows it.</p>
+
+<h2>Other print sizes</h2>
+<ul class="links">
+<li><a href="../index.html">Print size calculator (any pixel size)</a></li>
+<li><a href="11x14.html">Pixels needed for an 11×14 print</a></li>
+<li><a href="16x20.html">Pixels needed for a 16×20 print</a></li>
+<li><a href="24x36.html">Pixels needed for a 24×36 print</a></li>
+<li><a href="a4.html">Pixels needed for A4 and A3 prints</a></li>
+<li><a href="iphone.html">How big can I print an iPhone photo?</a></li>
+<li><a href="6000x4000.html">How large can I print a 6000×4000 photo?</a></li>
+<li><a href="../megapixels-to-resolution.html">Megapixels to resolution chart</a></li>
+<li><a href="../dpi-ppi-calculator.html">DPI / PPI calculator</a></li>
+<li><a href="../aspect-ratio-calculator.html">Aspect ratio calculator for print</a></li>
+</ul>
+
+<footer>
+<p>Results are estimates based on pixel dimensions and PPI. Actual print quality also depends on focus, exposure, lens sharpness, compression and the printing process.</p>
+<p><a href="../index.html">Print Size Calculator</a> · <a href="8x10.html">8×10</a> · <a href="11x14.html">11×14</a> · <a href="16x20.html">16×20</a> · <a href="24x36.html">24×36</a> · <a href="a4.html">A4</a> · <a href="iphone.html">iPhone</a> · <a href="6000x4000.html">6000×4000</a> · <a href="../megapixels-to-resolution.html">Megapixels</a> · <a href="../dpi-ppi-calculator.html">DPI/PPI</a> · <a href="../aspect-ratio-calculator.html">Aspect Ratio</a></p>
+</footer>
+</div>
+<script>
+var PRINT_W=8, PRINT_H=10;
+function verdictFor(ppi){return ppi>=300?'Excellent — sharp even up close':ppi>=200?'Good — fine at normal viewing distance':ppi>=150?'Acceptable — best viewed from a few feet away':'Below 150 PPI for this size — the print may look soft';}
+function calc(){
+  var w=parseFloat(document.getElementById('pw').value)||0;
+  var h=parseFloat(document.getElementById('ph').value)||0;
+  if(!w||!h){document.getElementById('verdict').textContent='';return;}
+  var eff=Math.max(Math.min(w/PRINT_W,h/PRINT_H),Math.min(w/PRINT_H,h/PRINT_W));
+  document.getElementById('verdict').textContent='Effective resolution for '+PRINT_W+'×'+PRINT_H+' in: about '+Math.floor(eff)+' PPI. '+verdictFor(eff);
+}
+document.getElementById('pw').addEventListener('input',calc);
+document.getElementById('ph').addEventListener('input',calc);
+calc();
+</script>
+</body>
+</html>

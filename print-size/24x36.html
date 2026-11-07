@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pixels Needed for 24×36 Print — 7200×10800 at 300 PPI</title>
+<meta name="description" content="A 24×36 inch poster print needs 7200 × 10800 pixels (77.8 MP) at 300 PPI — but 150 PPI (3600 × 5400, 19.4 MP) usually looks fine at poster viewing distance.">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+<a class="brand" href="../index.html">Print Size Calculator</a>
+<nav class="top">
+<a href="../index.html">Calculator</a>
+<a href="8x10.html">8×10</a>
+<a href="11x14.html">11×14</a>
+<a href="16x20.html">16×20</a>
+<a href="a4.html">A4 & A3</a>
+<a href="iphone.html">iPhone Photos</a>
+<a href="6000x4000.html">6000×4000</a>
+<a href="../megapixels-to-resolution.html">Megapixels</a>
+<a href="../dpi-ppi-calculator.html">DPI / PPI</a>
+<a href="../aspect-ratio-calculator.html">Aspect Ratio</a>
+</nav>
+</header>
+
+<h1>Pixels Needed for a 24×36 Print</h1>
+<p class="lede">At a strict 300 PPI a 24×36 inch print would need <strong>7200 × 10800 pixels (77.8 megapixels)</strong> — more than most cameras produce. In practice, posters are viewed from several feet away, so 150–200 PPI usually looks sharp.</p>
+
+<h2>Pixels needed for 24×36, by quality level</h2>
+<table>
+<thead><tr><th>Resolution</th><th>Pixels needed</th><th>Megapixels</th><th>Quality</th></tr></thead>
+<tbody>
+<tr><td>300 PPI</td><td>7200 × 10800 px</td><td>77.8 MP</td><td><span class="badge excellent">Excellent</span> — close viewing</td></tr>
+<tr><td>200 PPI</td><td>4800 × 7200 px</td><td>34.6 MP</td><td><span class="badge good">Good</span> — normal distance</td></tr>
+<tr><td>150 PPI</td><td>3600 × 5400 px</td><td>19.4 MP</td><td><span class="badge acceptable">Acceptable</span> — wall viewing</td></tr>
+</tbody>
+</table>
+<p>The maths is print inches × PPI for each side: 24 in × 300 = 7200 px and 36 in × 300 = 10800 px, and 7200 × 10800 = 77,760,000 pixels = 77.76 megapixels (rounded to 77.8 MP above).</p>
+
+<div class="card">
+<h2 style="margin-top:0">Check your photo</h2>
+<div class="grid">
+<div><label for="pw">Your pixel width</label><input type="number" id="pw" value="6000" min="1" inputmode="numeric"></div>
+<div><label for="ph">Your pixel height</label><input type="number" id="ph" value="4000" min="1" inputmode="numeric"></div>
+</div>
+<p class="result" id="verdict" aria-live="polite"></p>
+</div>
+
+<h2>Why 150 PPI can be enough at 24×36</h2>
+<p>24×36 is a <strong>2:3 aspect ratio</strong> — the same shape as a standard 3:2 camera sensor, so most camera photos fill the sheet with no crop. The key variable is <strong>viewing distance</strong>. The eye can only resolve a limited amount of detail, and that limit falls as you step back:</p>
+<ul>
+<li>A hand-held 8×10 is viewed from about 12 inches, so it rewards 300 PPI.</li>
+<li>A 24×36 poster is normally viewed from 3–6 feet or more. At that distance, 150 PPI detail is at or beyond what most people can distinguish, and 200 PPI leaves comfortable headroom.</li>
+<li>Reserve 300 PPI at this size for prints people will inspect nose-close, such as detailed maps, technical drawings or gallery work viewed up close.</li>
+</ul>
+<p>Example: a common 6000 × 4000 px photo (24 MP) gives about 167 PPI at this size — 6000 ÷ 36 = 167 on the long side and 4000 ÷ 24 = 167 on the short side — above the 150 PPI poster threshold, so it is a realistic poster candidate, not a failure for missing 300 PPI.</p>
+
+<h2>Other print sizes</h2>
+<ul class="links">
+<li><a href="../index.html">Print size calculator (any pixel size)</a></li>
+<li><a href="8x10.html">Pixels needed for an 8×10 print</a></li>
+<li><a href="11x14.html">Pixels needed for an 11×14 print</a></li>
+<li><a href="16x20.html">Pixels needed for a 16×20 print</a></li>
+<li><a href="a4.html">Pixels needed for A4 and A3 prints</a></li>
+<li><a href="iphone.html">How big can I print an iPhone photo?</a></li>
+<li><a href="6000x4000.html">How large can I print a 6000×4000 photo?</a></li>
+<li><a href="../megapixels-to-resolution.html">Megapixels to resolution chart</a></li>
+<li><a href="../dpi-ppi-calculator.html">DPI / PPI calculator</a></li>
+<li><a href="../aspect-ratio-calculator.html">Aspect ratio calculator for print</a></li>
+</ul>
+
+<footer>
+<p>Results are estimates based on pixel dimensions and PPI. Actual print quality also depends on focus, exposure, lens sharpness, compression and the printing process.</p>
+<p><a href="../index.html">Print Size Calculator</a> · <a href="8x10.html">8×10</a> · <a href="11x14.html">11×14</a> · <a href="16x20.html">16×20</a> · <a href="24x36.html">24×36</a> · <a href="a4.html">A4</a> · <a href="iphone.html">iPhone</a> · <a href="6000x4000.html">6000×4000</a> · <a href="../megapixels-to-resolution.html">Megapixels</a> · <a href="../dpi-ppi-calculator.html">DPI/PPI</a> · <a href="../aspect-ratio-calculator.html">Aspect Ratio</a></p>
+</footer>
+</div>
+<script>
+var PRINT_W=24, PRINT_H=36;
+function verdictFor(ppi){return ppi>=300?'Excellent — sharp even up close':ppi>=200?'Good — fine at normal viewing distance':ppi>=150?'Acceptable — best viewed from a few feet away, which suits a poster':'Below 150 PPI for this size — the print may look soft';}
+function calc(){
+  var w=parseFloat(document.getElementById('pw').value)||0;
+  var h=parseFloat(document.getElementById('ph').value)||0;
+  if(!w||!h){document.getElementById('verdict').textContent='';return;}
+  var eff=Math.max(Math.min(w/PRINT_W,h/PRINT_H),Math.min(w/PRINT_H,h/PRINT_W));
+  document.getElementById('verdict').textContent='Effective resolution for '+PRINT_W+'×'+PRINT_H+' in: about '+Math.floor(eff)+' PPI. '+verdictFor(eff);
+}
+document.getElementById('pw').addEventListener('input',calc);
+document.getElementById('ph').addEventListener('input',calc);
+calc();
+</script>
+</body>
+</html>
