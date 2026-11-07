@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DPI / PPI Calculator — Pixels, Inches and Resolution Converter</title>
+<meta name="description" content="Free DPI/PPI calculator: given any two of pixels, print inches and PPI, it computes the third. Plus why changing a file's DPI setting adds no detail.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+<a class="brand" href="index.html">Print Size Calculator</a>
+<nav class="top">
+<a href="index.html">Calculator</a>
+<a href="print-size/8x10.html">8×10</a>
+<a href="print-size/11x14.html">11×14</a>
+<a href="print-size/16x20.html">16×20</a>
+<a href="print-size/24x36.html">24×36</a>
+<a href="print-size/a4.html">A4 &amp; A3</a>
+<a href="print-size/iphone.html">iPhone Photos</a>
+<a href="print-size/6000x4000.html">6000×4000</a>
+<a href="megapixels-to-resolution.html">Megapixels</a>
+<a href="aspect-ratio-calculator.html">Aspect Ratio</a>
+</nav>
+</header>
+
+<h1>DPI / PPI Calculator</h1>
+<p class="lede">Pixels, inches and PPI are three sides of one triangle: <strong>pixels = inches × PPI</strong>. Give this calculator any two of them and it works out the third.</p>
+
+<div class="card">
+<h2 style="margin-top:0">Pixels ↔ inches ↔ PPI converter</h2>
+<label for="mode">What do you want to calculate?</label>
+<select id="mode" style="width:100%;padding:10px 12px;font-size:1rem;border:1px solid var(--line);border-radius:8px">
+<option value="ppi" selected>Resolution (PPI) — from pixels and inches</option>
+<option value="inches">Print size (inches) — from pixels and PPI</option>
+<option value="pixels">Pixels needed — from inches and PPI</option>
+</select>
+<div class="grid">
+<div><label for="a" id="labelA">Pixels</label><input type="number" id="a" value="6000" min="0" step="any" inputmode="decimal"></div>
+<div><label for="b" id="labelB">Print size (inches)</label><input type="number" id="b" value="20" min="0" step="any" inputmode="decimal"></div>
+</div>
+<p class="result" id="out" aria-live="polite"></p>
+</div>
+
+<h2>Worked examples</h2>
+<table>
+<thead><tr><th>Question</th><th>Calculation</th><th>Answer</th></tr></thead>
+<tbody>
+<tr><td>How much resolution is a 6000 px photo printed 20 inches wide?</td><td>6000 ÷ 20</td><td>300 PPI</td></tr>
+<tr><td>How big can 3000 px print at 300 PPI?</td><td>3000 ÷ 300</td><td>10 inches</td></tr>
+<tr><td>How many pixels does an 8 inch print need at 300 PPI?</td><td>8 × 300</td><td>2400 px</td></tr>
+<tr><td>How many pixels does a 10 inch print need at 150 PPI?</td><td>10 × 150</td><td>1500 px</td></tr>
+</tbody>
+</table>
+
+<h2>DPI vs PPI — and the DPI tag myth</h2>
+<p><strong>PPI</strong> (pixels per inch) belongs to the image: how many of its pixels land on each inch of paper. <strong>DPI</strong> (dots per inch) belongs to the printer: how many ink dots it lays down. The two are related but not interchangeable, and for working out print size, PPI is the number that matters.</p>
+<p class="note"><strong>Changing a file's DPI setting adds no detail.</strong> The DPI/PPI value stored in a photo file is just a label — a default print-size instruction. A 6000 × 4000 photo tagged at 72 DPI and the same file tagged at 300 DPI contain exactly the same 24 million pixels. The only difference is the size a program suggests first: 6000 ÷ 72 = 83.33 inches at the 72 tag, versus 6000 ÷ 300 = 20 inches at the 300 tag. If an editor "changes DPI" without resampling, no pixel is created or destroyed; if it resamples, it is inventing or discarding pixels, which is a different operation. What decides print quality is always the real pixel count divided by the real printed size — the calculation at the top of this page.</p>
+<p>So when a print shop asks for a "300 DPI file", they mean a file whose pixels ÷ intended inches works out to 300 — for example 2400 × 3000 px for an 8×10. Check your size on the dedicated pages below.</p>
+
+<h2>More print sizes and tools</h2>
+<ul class="links">
+<li><a href="index.html">Print size calculator (any pixel size)</a></li>
+<li><a href="print-size/8x10.html">Pixels needed for an 8×10 print</a></li>
+<li><a href="print-size/11x14.html">Pixels needed for an 11×14 print</a></li>
+<li><a href="print-size/16x20.html">Pixels needed for a 16×20 print</a></li>
+<li><a href="print-size/24x36.html">Pixels needed for a 24×36 print</a></li>
+<li><a href="print-size/a4.html">Pixels needed for A4 and A3 prints</a></li>
+<li><a href="print-size/iphone.html">How big can I print an iPhone photo?</a></li>
+<li><a href="print-size/6000x4000.html">How large can I print a 6000×4000 photo?</a></li>
+<li><a href="megapixels-to-resolution.html">Megapixels to resolution chart</a></li>
+<li><a href="aspect-ratio-calculator.html">Aspect ratio calculator for print</a></li>
+</ul>
+
+<footer>
+<p>Results are estimates based on pixel dimensions and PPI. Actual print quality also depends on focus, exposure, lens sharpness, compression and the printing process.</p>
+<p><a href="index.html">Print Size Calculator</a> · <a href="print-size/8x10.html">8×10</a> · <a href="print-size/11x14.html">11×14</a> · <a href="print-size/16x20.html">16×20</a> · <a href="print-size/24x36.html">24×36</a> · <a href="print-size/a4.html">A4</a> · <a href="print-size/iphone.html">iPhone</a> · <a href="print-size/6000x4000.html">6000×4000</a> · <a href="megapixels-to-resolution.html">Megapixels</a> · <a href="dpi-ppi-calculator.html">DPI/PPI</a> · <a href="aspect-ratio-calculator.html">Aspect Ratio</a></p>
+</footer>
+</div>
+<script>
+var MODES={
+  ppi:{la:'Pixels',lb:'Print size (inches)',va:6000,vb:20,calc:function(a,b){return a/b},fmt:function(a,b,r){return a+' px across '+b+' inches = '+Math.round(r)+' PPI.'}},
+  inches:{la:'Pixels',lb:'Resolution (PPI)',va:3000,vb:300,calc:function(a,b){return a/b},fmt:function(a,b,r){return a+' px at '+b+' PPI prints at '+(Math.round(r*100)/100)+' inches.'}},
+  pixels:{la:'Print size (inches)',lb:'Resolution (PPI)',va:8,vb:300,calc:function(a,b){return a*b},fmt:function(a,b,r){return a+' inches at '+b+' PPI needs '+Math.round(r)+' pixels.'}}
+};
+function applyMode(){
+  var m=MODES[document.getElementById('mode').value];
+  document.getElementById('labelA').textContent=m.la;
+  document.getElementById('labelB').textContent=m.lb;
+  document.getElementById('a').value=m.va;
+  document.getElementById('b').value=m.vb;
+  calc();
+}
+function calc(){
+  var m=MODES[document.getElementById('mode').value];
+  var a=parseFloat(document.getElementById('a').value)||0;
+  var b=parseFloat(document.getElementById('b').value)||0;
+  if(!a||!b){document.getElementById('out').textContent='';return;}
+  document.getElementById('out').textContent=m.fmt(a,b,m.calc(a,b));
+}
+document.getElementById('mode').addEventListener('change',applyMode);
+document.getElementById('a').addEventListener('input',calc);
+document.getElementById('b').addEventListener('input',calc);
+calc();
+</script>
+</body>
+</html>

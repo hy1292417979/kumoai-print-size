@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Print Size Calculator — How Big Can I Print My Photo?</title>
+<meta name="description" content="Free print size calculator: enter your photo's pixel width and height to see the maximum print size at 300, 200 and 150 PPI, with quality ratings for each size.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+<a class="brand" href="index.html">Print Size Calculator</a>
+<nav class="top">
+<a href="print-size/8x10.html">8×10</a>
+<a href="print-size/11x14.html">11×14</a>
+<a href="print-size/16x20.html">16×20</a>
+<a href="print-size/24x36.html">24×36</a>
+<a href="print-size/a4.html">A4 &amp; A3</a>
+<a href="print-size/iphone.html">iPhone Photos</a>
+<a href="print-size/6000x4000.html">6000×4000</a>
+<a href="megapixels-to-resolution.html">Megapixels</a>
+<a href="dpi-ppi-calculator.html">DPI / PPI</a>
+<a href="aspect-ratio-calculator.html">Aspect Ratio</a>
+</nav>
+</header>
+
+<h1>Print Size Calculator</h1>
+<p class="lede">How big can you print a photo without it looking soft? Enter its size in pixels and this calculator shows the largest print size at three quality levels.</p>
+
+<div class="card">
+<div class="grid">
+<div><label for="pw">Pixel width</label><input type="number" id="pw" value="6000" min="1" inputmode="numeric"></div>
+<div><label for="ph">Pixel height</label><input type="number" id="ph" value="4000" min="1" inputmode="numeric"></div>
+</div>
+<p class="result" id="summary" aria-live="polite"></p>
+<table>
+<thead><tr><th>Resolution</th><th>Print size (inches)</th><th>Print size (cm)</th><th>Quality</th></tr></thead>
+<tbody id="results"></tbody>
+</table>
+</div>
+
+<h2>How the calculation works</h2>
+<p>Print size is pixels divided by resolution: <strong>print inches = pixels ÷ PPI</strong>. PPI (pixels per inch) describes how densely pixels are spread across the paper. More pixels per inch means finer detail:</p>
+<ul>
+<li><strong>300 PPI — <span class="badge excellent">Excellent</span></strong> Sharp at close viewing distance. The standard for photos you will hold or inspect up close.</li>
+<li><strong>200 PPI — <span class="badge good">Good</span></strong> Hard to tell apart from 300 PPI at normal viewing distance. A practical target for most enlargements.</li>
+<li><strong>150 PPI — <span class="badge acceptable">Acceptable</span></strong> Fine for wall prints viewed from a few feet away, such as posters and large canvas prints.</li>
+</ul>
+<p>Example: a 6000 × 4000 pixel photo (24 megapixels) prints at 20 × 13.33 inches at 300 PPI, 30 × 20 inches at 200 PPI, and 40 × 26.67 inches at 150 PPI.</p>
+
+<h2>Maximum print size for common photo dimensions</h2>
+<table>
+<thead><tr><th>Pixels</th><th>Megapixels</th><th>At 300 PPI</th><th>At 200 PPI</th><th>At 150 PPI</th></tr></thead>
+<tbody>
+<tr><td>1920 × 1080</td><td>2.1 MP</td><td>6.4 × 3.6 in</td><td>9.6 × 5.4 in</td><td>12.8 × 7.2 in</td></tr>
+<tr><td>3000 × 2000</td><td>6.0 MP</td><td>10.0 × 6.7 in</td><td>15.0 × 10.0 in</td><td>20.0 × 13.3 in</td></tr>
+<tr><td>4032 × 3024</td><td>12.2 MP</td><td>13.4 × 10.1 in</td><td>20.2 × 15.1 in</td><td>26.9 × 20.2 in</td></tr>
+<tr><td>6000 × 4000</td><td>24.0 MP</td><td>20.0 × 13.3 in</td><td>30.0 × 20.0 in</td><td>40.0 × 26.7 in</td></tr>
+<tr><td>8256 × 5504</td><td>45.4 MP</td><td>27.5 × 18.3 in</td><td>41.3 × 27.5 in</td><td>55.0 × 36.7 in</td></tr>
+</tbody>
+</table>
+
+<h2>Pixels needed for a specific print size</h2>
+<ul class="links">
+<li><a href="print-size/8x10.html">Pixels needed for an 8×10 print</a> — 2400 × 3000 px at 300 PPI</li>
+<li><a href="print-size/11x14.html">Pixels needed for an 11×14 print</a> — 3300 × 4200 px at 300 PPI</li>
+<li><a href="print-size/16x20.html">Pixels needed for a 16×20 print</a> — 4800 × 6000 px at 300 PPI</li>
+<li><a href="print-size/24x36.html">Pixels needed for a 24×36 print</a> — 7200 × 10800 px at 300 PPI</li>
+<li><a href="print-size/a4.html">Pixels needed for A4 and A3 prints</a> — 2480 × 3508 px for A4 at 300 PPI</li>
+<li><a href="print-size/iphone.html">How big can I print an iPhone photo?</a> — based on 4032 × 3024 px</li>
+<li><a href="print-size/6000x4000.html">How large can I print a 6000×4000 photo?</a> — 20 × 13.33 in at 300 PPI</li>
+<li><a href="megapixels-to-resolution.html">Megapixels to resolution chart</a> — pixel dimensions for 1–108 MP</li>
+<li><a href="dpi-ppi-calculator.html">DPI / PPI calculator</a> — pixels, inches and PPI converter</li>
+<li><a href="aspect-ratio-calculator.html">Aspect ratio calculator for print</a> — crop amounts for common print sizes</li>
+</ul>
+
+<footer>
+<p>Results are estimates based on pixel dimensions and PPI. Actual print quality also depends on focus, exposure, lens sharpness, compression and the printing process.</p>
+<p><a href="index.html">Print Size Calculator</a> · <a href="print-size/8x10.html">8×10</a> · <a href="print-size/11x14.html">11×14</a> · <a href="print-size/16x20.html">16×20</a> · <a href="print-size/24x36.html">24×36</a> · <a href="print-size/a4.html">A4</a> · <a href="print-size/iphone.html">iPhone</a> · <a href="print-size/6000x4000.html">6000×4000</a> · <a href="megapixels-to-resolution.html">Megapixels</a> · <a href="dpi-ppi-calculator.html">DPI/PPI</a> · <a href="aspect-ratio-calculator.html">Aspect Ratio</a></p>
+</footer>
+</div>
+<script>
+function fmt(n){return (Math.round(n*100)/100).toFixed(2).replace(/\.00$/,'')}
+function calc(){
+  var w=parseFloat(document.getElementById('pw').value)||0;
+  var h=parseFloat(document.getElementById('ph').value)||0;
+  var tiers=[[300,'Excellent','excellent'],[200,'Good','good'],[150,'Acceptable','acceptable']];
+  var rows='', i, ppi;
+  for(i=0;i<tiers.length;i++){ppi=tiers[i][0];
+    var iw=w/ppi, ih=h/ppi;
+    rows+='<tr><td>'+ppi+' PPI</td><td>'+fmt(iw)+' × '+fmt(ih)+' in</td><td>'+fmt(iw*2.54)+' × '+fmt(ih*2.54)+' cm</td><td><span class="badge '+tiers[i][2]+'">'+tiers[i][1]+'</span></td></tr>';
+  }
+  document.getElementById('results').innerHTML=rows;
+  document.getElementById('summary').textContent = (w&&h) ? ('Your photo is '+w+' × '+h+' px ('+(Math.round(w*h/100000)/10)+' megapixels).') : '';
+}
+document.getElementById('pw').addEventListener('input',calc);
+document.getElementById('ph').addEventListener('input',calc);
+calc();
+</script>
+</body>
+</html>

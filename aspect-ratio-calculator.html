@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aspect Ratio Calculator for Print — Crop Amounts for Common Print Sizes</title>
+<meta name="description" content="Enter your photo's pixel dimensions to see its aspect ratio and exactly how much cropping each standard print size (4×6, 5×7, 8×10, 11×14, 16×20, 24×36) needs.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+<a class="brand" href="index.html">Print Size Calculator</a>
+<nav class="top">
+<a href="index.html">Calculator</a>
+<a href="print-size/8x10.html">8×10</a>
+<a href="print-size/11x14.html">11×14</a>
+<a href="print-size/16x20.html">16×20</a>
+<a href="print-size/24x36.html">24×36</a>
+<a href="print-size/a4.html">A4 &amp; A3</a>
+<a href="print-size/iphone.html">iPhone Photos</a>
+<a href="print-size/6000x4000.html">6000×4000</a>
+<a href="megapixels-to-resolution.html">Megapixels</a>
+<a href="dpi-ppi-calculator.html">DPI / PPI</a>
+</nav>
+</header>
+
+<h1>Aspect Ratio Calculator for Print</h1>
+<p class="lede">A print only avoids cropping when its shape matches your photo's aspect ratio. Enter your pixel dimensions to see your ratio — and the exact crop each standard print size will take.</p>
+
+<div class="card">
+<div class="grid">
+<div><label for="pw">Pixel width</label><input type="number" id="pw" value="6000" min="1" inputmode="numeric"></div>
+<div><label for="ph">Pixel height</label><input type="number" id="ph" value="4000" min="1" inputmode="numeric"></div>
+</div>
+<p class="result" id="summary" aria-live="polite"></p>
+<table>
+<thead><tr><th>Print size</th><th>Print ratio</th><th>Fit</th><th>Crop</th></tr></thead>
+<tbody id="results"></tbody>
+</table>
+</div>
+
+<h2>Worked example: a 6000 × 4000 photo (3:2)</h2>
+<table>
+<thead><tr><th>Print size</th><th>Fit</th><th>What gets cropped</th></tr></thead>
+<tbody>
+<tr><td>4×6 in (3:2)</td><td><span class="badge excellent">Exact fit</span></td><td>Nothing — same shape as the photo</td></tr>
+<tr><td>5×7 in (7:5)</td><td>Crop</td><td>Long side cut to 5600 px — lose 400 px (6.7% of the long side)</td></tr>
+<tr><td>8×10 in (5:4)</td><td>Crop</td><td>Long side cut to 5000 px — lose 1000 px (16.7% of the long side)</td></tr>
+<tr><td>11×14 in (14:11)</td><td>Crop</td><td>Long side cut to 5091 px — lose 909 px (15.2% of the long side)</td></tr>
+<tr><td>16×20 in (5:4)</td><td>Crop</td><td>Long side cut to 5000 px — lose 1000 px (16.7% of the long side)</td></tr>
+<tr><td>24×36 in (3:2)</td><td><span class="badge excellent">Exact fit</span></td><td>Nothing — same shape as the photo</td></tr>
+</tbody>
+</table>
+<p>Phone photos are 4:3, a squarer shape, so the crops land differently: a 4032 × 3024 file needs only a small long-side crop for 8×10 (to 3780 px, losing 252 px / 6.3%), but cropping for a 4×6 or 24×36 comes off its short side (to 2688 px, losing 336 px / 11.1%), because those prints are wider in shape than the photo. Try it in the calculator above.</p>
+
+<h2>How cropping for print works</h2>
+<p>To fill the whole sheet, the printer scales your photo until both sides of the paper are covered, then trims the overflow. So a shape mismatch is always paid from the longer side relative to the print: a wide photo printed squarer loses its left and right edges, and a squarer photo printed wide loses top and bottom. Two practical consequences:</p>
+<ul>
+<li><strong>Keep subjects away from the edges</strong> that will be trimmed — for a 3:2 photo going to 8×10, that is 16.7% of the long side in total.</li>
+<li><strong>Cropping also spends resolution.</strong> The trimmed pixels no longer count toward the print, which is why the size pages on this site report effective PPI after the crop. You can check the pixel budget for each size below.</li>
+</ul>
+
+<h2>More print sizes and tools</h2>
+<ul class="links">
+<li><a href="index.html">Print size calculator (any pixel size)</a></li>
+<li><a href="print-size/8x10.html">Pixels needed for an 8×10 print</a></li>
+<li><a href="print-size/11x14.html">Pixels needed for an 11×14 print</a></li>
+<li><a href="print-size/16x20.html">Pixels needed for a 16×20 print</a></li>
+<li><a href="print-size/24x36.html">Pixels needed for a 24×36 print</a></li>
+<li><a href="print-size/a4.html">Pixels needed for A4 and A3 prints</a></li>
+<li><a href="print-size/iphone.html">How big can I print an iPhone photo?</a></li>
+<li><a href="print-size/6000x4000.html">How large can I print a 6000×4000 photo?</a></li>
+<li><a href="megapixels-to-resolution.html">Megapixels to resolution chart</a></li>
+<li><a href="dpi-ppi-calculator.html">DPI / PPI calculator</a></li>
+</ul>
+
+<footer>
+<p>Results are estimates based on pixel dimensions and PPI. Actual print quality also depends on focus, exposure, lens sharpness, compression and the printing process.</p>
+<p><a href="index.html">Print Size Calculator</a> · <a href="print-size/8x10.html">8×10</a> · <a href="print-size/11x14.html">11×14</a> · <a href="print-size/16x20.html">16×20</a> · <a href="print-size/24x36.html">24×36</a> · <a href="print-size/a4.html">A4</a> · <a href="print-size/iphone.html">iPhone</a> · <a href="print-size/6000x4000.html">6000×4000</a> · <a href="megapixels-to-resolution.html">Megapixels</a> · <a href="dpi-ppi-calculator.html">DPI/PPI</a> · <a href="aspect-ratio-calculator.html">Aspect Ratio</a></p>
+</footer>
+</div>
+<script>
+function gcd(a,b){while(b){var t=a%b;a=b;b=t;}return a||1;}
+var SIZES=[['4×6 in',6,4],['5×7 in',7,5],['8×10 in',10,8],['11×14 in',14,11],['16×20 in',20,16],['24×36 in',36,24]];
+function ratioText(L,S){
+  var g=gcd(Math.round(L*1000),Math.round(S*1000));
+  var a=Math.round(L*1000)/g, b=Math.round(S*1000)/g;
+  if(a<=20&&b<=20){return a+':'+b;}
+  return (Math.round(L/S*100)/100)+' : 1';
+}
+function calc(){
+  var w=parseFloat(document.getElementById('pw').value)||0;
+  var h=parseFloat(document.getElementById('ph').value)||0;
+  if(!w||!h){document.getElementById('results').innerHTML='';document.getElementById('summary').textContent='';return;}
+  var pl=Math.max(w,h), ps=Math.min(w,h), rph=pl/ps;
+  var desc;
+  if(Number.isInteger(w)&&Number.isInteger(h)){
+    var g=gcd(w,h); desc=(w/g)+':'+(h/g);
+  } else { desc=(Math.round(w/h*100)/100)+' : 1'; }
+  document.getElementById('summary').textContent='Your photo is '+w+' × '+h+' px — aspect ratio '+desc+' (long side ÷ short side = '+(Math.round(rph*1000)/1000)+').';
+  var rows='', i;
+  for(i=0;i<SIZES.length;i++){
+    var name=SIZES[i][0], L=SIZES[i][1], S=SIZES[i][2], rp=L/S, fit, crop;
+    if(Math.abs(rph-rp)<0.005){ fit='<span class="badge excellent">Exact fit</span>'; crop='No crop — same shape'; }
+    else if(rph>rp){ var nl=Math.round(ps*rp), lost=Math.round(pl-nl); fit='Crop'; crop='Long side cut to '+nl+' px — lose '+lost+' px ('+(Math.round(lost/pl*1000)/10)+'% of the long side), leaving '+nl+' × '+Math.round(ps)+' px'; }
+    else { var ns=Math.round(pl/rp), lost2=Math.round(ps-ns); fit='Crop'; crop='Short side cut to '+ns+' px — lose '+lost2+' px ('+(Math.round(lost2/ps*1000)/10)+'% of the short side), leaving '+Math.round(pl)+' × '+ns+' px'; }
+    rows+='<tr><td>'+name+'</td><td>'+ratioText(L,S)+'</td><td>'+fit+'</td><td>'+crop+'</td></tr>';
+  }
+  document.getElementById('results').innerHTML=rows;
+}
+document.getElementById('pw').addEventListener('input',calc);
+document.getElementById('ph').addEventListener('input',calc);
+calc();
+</script>
+</body>
+</html>
